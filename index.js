@@ -7,14 +7,14 @@ let findAdjacent = (vertex, vertices, edges) => {
     edge.includes(vertex)
   }).map(edge => {
     edge.filter(node => {
-      node != vertex
+      return node != vertex
     })
   }).map(vertexName => {
     vertices.find(vertex => {
       vertex.name == vertexName
     })
   }).filter(node => {
-    node.distance == null
+    return node.distance == null
   })
 }
 
