@@ -11,7 +11,7 @@ let findAdjacent = (vertex, vertices, edges) => {
     })
   }).map(vertexName => {
     vertices.find(vertex => {
-      vertex.name == vertexName
+      return vertex.name == vertexName
     })
   }).filter(node => {
     return node.distance == null
