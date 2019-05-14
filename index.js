@@ -12,7 +12,7 @@ let findAdjacent = (vertex, vertices, edges) => {
   })
   edgesWithVertex.forEach(edge => {
     edge.filter(edgeVertix => {
-      edgeVertix != vertex 
+      edgeVertix != vertex
     })
   })
   adjacentVertices = vertices.filter(vertex => {
