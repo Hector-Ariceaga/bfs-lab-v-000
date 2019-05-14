@@ -6,11 +6,11 @@ let findAdjacent = (vertex, vertices, edges) => {
   return edges.filter(edge => {
     edge.includes(vertex)
   }).map(edge => {
-    edge.filter(node => {
+    return edge.filter(node => {
       return node != vertex
     })
   }).map(vertexName => {
-    vertices.find(vertex => {
+    return vertices.find(vertex => {
       return vertex.name == vertexName
     })
   }).filter(node => {
