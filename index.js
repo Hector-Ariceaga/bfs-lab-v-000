@@ -3,13 +3,12 @@ function bfs(startNode, vertices, edges){
 }
 
 let findAdjacent = (vertex, vertices, edges) => {
-  let adjacentVertices = [];
-  let edgesWithVertex = [];
-  edges.forEach(edge => {
-    if (edge.includes(vertex)) {
-      edgesWithVertex.push(edge)
-    }
-  })
+  console.log(edges.filter(edge => {
+    edge.includes(vertex)
+  }).map(edge.filter(node => {
+    node != vertex
+  }))
+)
   edgesWithVertex.map(edge => {
     edge.find(edgeVertix => {
       return edgeVertix != vertex
