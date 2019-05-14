@@ -3,9 +3,9 @@ function bfs(startNode, vertices, edges){
   queue = [startNode];
   queueOrder = [startNode];
 
-  while (queue.length != 0) {
-    let firstNode = queue.shift()
-    let adjacentVertices = findAdjacent(startNode)
+  while(queue.length != 0) {
+    let currentNode = queue.shift()
+    let adjacentVertices = findAdjacent(currentNode)
 
     for vertex in adjacentVertices {
       markDistanceAndPredecessor(vertex)
