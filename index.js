@@ -11,11 +11,15 @@ let findAdjacent = (vertex, vertices, edges) => {
     }
   })
   edgesWithVertex.forEach(edge => {
-    edge.forEach(edgeVertix => {
-      edgeVertix != vertex ? adjacentVertices.push(edgeVertix) : ''})
+    edge.filter(edgeVertix => {
+      edgeVertix != vertex 
+    })
   })
-  adjacentVertices = vertices.map(vertex => {
-    vertex.name == adjacentVertices[0] || vertex.name == adjacentVertices[1]
+  adjacentVertices = vertices.filter(vertex => {
+    edgesWithVertex.forEach(node => {
+      if vertex == node
+        return node
+    })
   })
   return adjacentVertices
 }
