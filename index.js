@@ -3,7 +3,7 @@ function bfs(startNode, vertices, edges){
   queue = [startNode];
   queueOrder = [startNode];
 
-  while queue.length != 0 {
+  while (queue.length != 0) {
     let firstNode = queue.shift()
     let adjacentVertices = findAdjacent(startNode)
 
