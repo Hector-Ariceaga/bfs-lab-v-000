@@ -20,7 +20,6 @@ let findAdjacent = (vertex, vertices, edges) => {
         return vertex
       }
     })
-  })
   return adjacentVertices
 }
 
