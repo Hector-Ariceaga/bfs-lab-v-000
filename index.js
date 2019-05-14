@@ -1,5 +1,17 @@
 function bfs(startNode, vertices, edges){
+  startNode.distance = 0;
+  queue = [startNode];
+  queueOrder = [startNode];
 
+  while queue.length != 0 {
+    let firstNode = queue.shift()
+    let adjacentVertices = findAdjacent(startNode)
+
+    for vertex in adjacentVertices {
+      markDistanceAndPredecessor(vertex)
+      queue.push(vertex)
+    }
+  }
 }
 
 let findVertex = (vertexName, vertices) => {
