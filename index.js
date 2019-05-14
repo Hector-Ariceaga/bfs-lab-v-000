@@ -8,7 +8,7 @@ let findAdjacent = (vertex, vertices, edges) => {
   }).map(edge => {
     edge.filter(node => {
       node != vertex
-    })
+    })[0]
   }))
 }
 
