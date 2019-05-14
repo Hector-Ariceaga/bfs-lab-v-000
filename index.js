@@ -4,12 +4,11 @@ function bfs(startNode, vertices, edges){
   queueOrder = [startNode];
 
   while(queue.length != 0) {
-    let currentNode = queue.shift()
-    let adjacentVertices = findAdjacent(currentNode)
-
-    for vertex in adjacentVertices {
-      markDistanceAndPredecessor(vertex)
-      queue.push(vertex)
+    let currentNode = queue.shift();
+    let adjacentVertices = findAdjacent(currentNode, vertices, edges);
+    queueOrder = queueOrder.concat(adjacentVertices);
+    markDistanceAndPredecessor(currentNode, adjacentVertices)
+    queue= queue.concat(adjacentVertices)
     }
   }
   return queueOrder
