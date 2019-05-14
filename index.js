@@ -5,7 +5,7 @@ function bfs(startNode, vertices, edges){
 let findAdjacent = (vertex, vertices, edges) => {
   console.log(edges.filter(edge => {
     edge.includes(vertex)
-  }).map(edge.filter(node => {
+  }).map(edges.filter(node => {
     node != vertex
   }))
 )
