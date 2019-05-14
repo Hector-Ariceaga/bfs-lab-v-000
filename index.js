@@ -12,7 +12,7 @@ let findAdjacent = (vertex, vertices, edges) => {
   })
   edgesWithVertex.map(edge => {
     edge.filter(edgeVertix => {
-      console.log(edgeVertix)
+      console.log(edgeVertix == vertex)
       edgeVertix != vertex
     })
   })
