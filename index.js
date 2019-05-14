@@ -10,7 +10,7 @@ let findAdjacent = (vertex, vertices, edges) => {
     node != vertex
   })
 })
-
+}
 
 let markDistanceAndPredecessor = (vertex, adjacentVertices)=> {
 
