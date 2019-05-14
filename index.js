@@ -1,14 +1,14 @@
 function bfs(startNode, vertices, edges){
   startNode.distance = 0;
-  queue = [startNode];
-  queueOrder = [startNode];
+  let queue = [startNode];
+  let queueOrder = [startNode];
 
   while(queue.length != 0) {
     let currentNode = queue.shift();
     let adjacentVertices = findAdjacent(currentNode, vertices, edges);
     queueOrder = queueOrder.concat(adjacentVertices);
     markDistanceAndPredecessor(currentNode, adjacentVertices)
-    queue= queue.concat(adjacentVertices)
+    queue = queue.concat(adjacentVertices)
     }
   return queueOrder
 }
