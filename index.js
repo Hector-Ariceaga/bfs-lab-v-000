@@ -16,9 +16,9 @@ let findAdjacent = (vertex, vertices, edges) => {
     })
   })
   adjacentVertices = vertices.filter(vertex => {
-    edgesWithVertex.forEach(node => {
-      if vertex == node
-        return node
+      if (vertex == edgesWithVertex[0] || vertex == edgesWithVertex [1]) {
+        return vertex
+      }
     })
   })
   return adjacentVertices
