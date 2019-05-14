@@ -7,9 +7,9 @@ let findAdjacent = (vertex, vertices, edges) => {
     edge.includes(vertex)
   }).map(edge => {
     edge.filter(node => {
-    node != vertex
-  })
-})
+      node != vertex
+    })
+  }))
 }
 
 let markDistanceAndPredecessor = (vertex, adjacentVertices)=> {
