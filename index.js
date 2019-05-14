@@ -2,6 +2,12 @@ function bfs(startNode, vertices, edges){
 
 }
 
+let findVertex = (vertexName, vertices) => {
+  return vertices.find(vertex => {
+    return vertex.name == vertexName
+  })
+}
+
 let findAdjacent = (vertex, vertices, edges) => {
   return edges.filter(edge => {
     return edge.includes(vertex)
@@ -10,9 +16,7 @@ let findAdjacent = (vertex, vertices, edges) => {
       return node != vertex
     })
   }).map(vertexName => {
-    return vertices.find(vertex => {
-      return vertex.name == vertexName
-    })
+    return findVertex(vertexName, vertices)
   }).filter(node => {
     return node.distance == null
   })
