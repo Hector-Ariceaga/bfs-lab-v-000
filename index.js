@@ -12,6 +12,7 @@ function bfs(startNode, vertices, edges){
       queue.push(vertex)
     }
   }
+  return queueOrder
 }
 
 let findVertex = (vertexName, vertices) => {
