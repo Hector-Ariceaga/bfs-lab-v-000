@@ -3,18 +3,18 @@ function bfs(startNode, vertices, edges){
 }
 
 let findAdjacent = (vertex, vertices, edges) => {
-  return edges.filter(edge => {
-    return edge.includes(vertex)
+  edges.filter(edge => {
+    edge.includes(vertex)
   }).map(edge => {
-    return edge.filter(node => {
-      return node != vertex
+    edge.filter(node => {
+      node != vertex
     })
   }).map(vertexName => {
-    return vertices.find(vertex => {
-      return vertex.name == vertexName
+    vertices.find(vertex => {
+      vertex.name == vertexName
     })
   }).filter(node => {
-    return node.distance == null
+    node.distance == null
   })
 }
 
