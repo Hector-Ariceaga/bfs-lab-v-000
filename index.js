@@ -15,11 +15,11 @@ let findAdjacent = (vertex, vertices, edges) => {
       edgeVertix != vertex
     })
   })
-  adjacentVertices = vertices.filter(vertex => {
-      if (vertex == edgesWithVertex[0] || vertex == edgesWithVertex [1]) {
-        return vertex
-      }
-    })
+  // adjacentVertices = vertices.filter(vertex => {
+  //     if (vertex == edgesWithVertex[0] || vertex == edgesWithVertex [1]) {
+  //       return vertex
+  //     }
+  //   })
     console.log(edgesWithVertex)
   return adjacentVertices
 }
