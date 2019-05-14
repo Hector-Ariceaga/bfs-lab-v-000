@@ -10,7 +10,6 @@ function bfs(startNode, vertices, edges){
     markDistanceAndPredecessor(currentNode, adjacentVertices)
     queue= queue.concat(adjacentVertices)
     }
-  }
   return queueOrder
 }
 
